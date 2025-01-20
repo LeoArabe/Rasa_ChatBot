@@ -1,13 +1,18 @@
+# data/rules.yml
 version: "3.1"
 
 rules:
-
-- rule: Say goodbye anytime the user says goodbye
+- rule: Dizer adeus sempre que o usuário disser adeus
   steps:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Dizer 'Eu sou um bot' sempre que o usuário desafiar
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Responder pergunta sobre wallpaper
+  steps:
+  - intent: ask_wallpaper_info
+  - action: utter_ask_wallpaper_info
